@@ -16,6 +16,20 @@ body, html {
     color: #1f2c4c;
 }
 
+.navbar {
+    background-color: #1f2c4c;
+}
+
+.navbar-brand {
+    padding-left: 2em;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    padding-left: 4em !important;
+}
+
 .header {
     padding-top: 40px;
 }
