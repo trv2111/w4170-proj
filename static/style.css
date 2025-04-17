@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+.field {
+    background-image: url('/static/images/field.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    color: #1f2c4c;
+}
+
+.header {
+    padding-top: 40px;
+}
+
+.header h2 {
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #f0f0f0;
+}
+
+.header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.highlight {
+    font-weight: 900;
+    color: #1f2c4c;
+}
+
+.player {
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px; 
+}
+
+.start-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #1f2c4c;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #304c7c;
+}
