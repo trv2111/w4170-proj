@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn | 4th Down Go-For-It</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="learn-page">
+        <h2>What should a coach consider on 4<sup>th</sup> down? Click on each of the following aspects to visualize the consideration:</h2>
+
+        <div class="learn-grid">
+            <a href="/learn/field-position" class="learn-card">
+                <h3>Field Position</h3>
+                <img src="{{ url_for('static', filename='icons/field_position.png') }}" alt="Field Position">
+            </a>
+
+            <a href="/learn/yards-to-go" class="learn-card">
+                <h3>Yards to Go</h3>
+                <img src="{{ url_for('static', filename='icons/yards_slidebar.png') }}" alt="Yards to Go">
+            </a>
+
+            <a href="/learn/time-score" class="learn-card">
+                <h3>Time Left & Score</h3>
+                <img src="{{ url_for('static', filename='icons/time_left_and_score.png') }}" alt="Time & Score">
+            </a>
+
+            <a href="/learn/timeouts" class="learn-card">
+                <h3>Timeouts</h3>
+                <img src="{{ url_for('static', filename='icons/timeouts.png') }}" alt="Timeouts">
+            </a>
+        </div>
+
+        <a href="/home" class="back-button">Go Back</a>
+    </div>
+</body>
+</html>

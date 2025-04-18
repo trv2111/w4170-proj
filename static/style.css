@@ -4,9 +4,6 @@ body, html {
     font-family: 'Segoe UI', sans-serif;
     height: 100%;
     overflow: hidden;
-}
-
-.field {
     background-image: url('/static/images/field.png');
     background-size: cover;
     background-position: center;
@@ -14,6 +11,12 @@ body, html {
     text-align: center;
     position: relative;
     color: #1f2c4c;
+}
+
+/* Body page needs plain background and not the field image so override it */
+body.home-page {
+    background: #b9d4c9 !important;
+    background-image: none !important;
 }
 
 .navbar {

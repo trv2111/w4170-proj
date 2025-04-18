@@ -1,10 +1,60 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+@app.context_processor
+def inject_request():
+    return dict(request=request)
+
+# Landing Page
 @app.route("/")
-def home():
+def index():
     return render_template("index.html")
+
+# Terre
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+# Dany
+@app.route("/football101")
+def football101():
+    return render_template("")
+
+# Terre
+@app.route("/learn")
+def learn():
+    return render_template("learn.html")
+
+# Kat
+@app.route("/learn/field-position")
+def learn_field_position():
+    return render_template("")
+
+# Dany
+@app.route("/learn/yards-to-go")
+def learn_yards_to_go():
+    return render_template("")
+
+# Connor
+@app.route("/learn/time-score")
+def learn_time_score():
+    return render_template("")
+
+# Terre
+@app.route("/learn/timeouts")
+def timeouts():
+    return render_template("timeouts.html")
+
+# Connor
+@app.route("/summary")
+def summary():
+    return render_template("")
+
+# Kat
+@app.route("/quiz")
+def quiz():
+    return render_template("")
 
 if __name__ == "__main__":
     app.run(debug=True)

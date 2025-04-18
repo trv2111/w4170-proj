@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | 4th Down Go-For-It</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="home-page">
+    {% include 'navbar.html' %}
+    <div class="home-buttons">
+        <a href="/football101" class="home-btn">
+            <img src="{{ url_for('static', filename='icons/football.svg') }}" alt="Football Icon">
+            Football 101
+        </a>
+
+        <a href="/learn" class="home-btn">
+            <img src="{{ url_for('static', filename='icons/learn.svg') }}" alt="Learn Icon">
+            Learn Mode
+        </a>
+
+        <a href="/summary" class="home-btn">
+            <img src="{{ url_for('static', filename='icons/books.svg') }}" alt="Summary Icon">
+            Summary
+        </a>
+
+        <a href="/quiz" class="home-btn">
+            <img src="{{ url_for('static', filename='icons/quiz.svg') }}" alt="Quiz Icon">
+            Try the Quiz
+        </a>
+    </div>
+
+    <a href="/" class="back-button">Go Back</a>
+</body>
+</html>
