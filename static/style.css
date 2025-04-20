@@ -95,6 +95,7 @@ body.home-page {
     font-family: sans-serif;
     padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -128,17 +129,18 @@ body.home-page {
 .zone-4  { left: 66.5%; width: 16.5%; background-color: #4682b4; }
 .zone-5  { left: 83%; width: 8.3%; background-color: #6a5acd; }
 
-.zone:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    z-index: 10;
-    font-size: 14px;
+.zone-info {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: .3rem solid white;
+    color: white;
 }
+
+.zone-1-info {background-color: #cd5c5c; }
+.zone-2-info {background-color: #d2691e; }
+.zone-3-info {background-color: #6b8e23; }
+.zone-4-info {background-color: #4682b4; }
+.zone-5-info {background-color: #6a5acd; }
