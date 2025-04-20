@@ -54,7 +54,16 @@ def summary():
 # Kat
 @app.route("/quiz")
 def quiz():
-    return render_template("")
+    return render_template("quiz.html")
+
+@app.route("/quiz-question/<questionid>")
+def quiz_question(questionid):
+    return render_template("quiz-question.html", questionid=questionid)
+
+@app.route("/quiz-answer/<questionid>/<answerid>")
+def quiz_answer(questionid, answerid):
+    return render_template("quiz-answer.html", questionid=questionid,
+        answerid=answerid)
 
 if __name__ == "__main__":
     app.run(debug=True)
