@@ -88,5 +88,15 @@ def quiz_answer(questionid, answerid):
     return render_template("quiz-answer.html", questionid=questionid,
         answerid=answerid)
 
+@app.route('/get_question', methods=['GET'])
+def get_question():
+    global questions
+    questionid = request.args.get('id')
+
+    result = questions[questionid]
+
+    return jsonify({"question": result})
+
+
 if __name__ == "__main__":
     app.run(debug=True)
