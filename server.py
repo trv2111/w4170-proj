@@ -97,6 +97,17 @@ def get_question():
 
     return jsonify({"question": result})
 
+@app.route('/get_answer', methods=['GET'])
+def get_answer():
+    global questions
+    questionid = request.args.get('id')
+    answerid = request.args.get('answerid')
+
+    question = questions[questionid]
+    result = question["answers"][answerid]
+
+    return jsonify({"answer": result})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
