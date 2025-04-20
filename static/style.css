@@ -89,3 +89,56 @@ body.home-page {
     color: white;
     font-size: 10em;
 }
+
+
+.field-body {
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.field-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 70vh;
+    margin: 0 auto;
+}
+
+.field-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Example distinct zone colors (you can customize more) */
+.zone-1  { left: 9%; width: 33%; background-color: #cd5c5c; }
+.zone-2  { left: 42%; width: 12%; background-color: #d2691e; }
+.zone-3  { left: 54%; width: 12.5%; background-color: #6b8e23; }
+.zone-4  { left: 66.5%; width: 16.5%; background-color: #4682b4; }
+.zone-5  { left: 83%; width: 8.3%; background-color: #6a5acd; }
+
+.zone:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 14px;
+}

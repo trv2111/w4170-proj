@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="field-body">
+    <div class="field-container">
+        <img class="field-image" src="{{ url_for('static', filename='images/field-diagram.png') }}" alt="football field"> 
+
+        <div class="zone zone-1" data-tooltip="Zone 1"></div>
+        <div class="zone zone-2" data-tooltip="Zone 2"></div>
+        <div class="zone zone-3" data-tooltip="Zone 3"></div>
+        <div class="zone zone-4" data-tooltip="Zone 4"></div>
+        <div class="zone zone-5" data-tooltip="Zone 5"></div>
+    </div>
+</div>
+
+{% endblock %}

@@ -63,7 +63,7 @@ def learn():
 # Kat
 @app.route("/learn/field-position")
 def learn_field_position():
-    return render_template("")
+    return render_template("fieldposition.html")
 
 # Dany
 @app.route("/learn/yards-to-go")
