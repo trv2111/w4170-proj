@@ -63,7 +63,7 @@ body.home-page {
     width: 600px; 
 }
 
-.start-button {
+.start-button, .default-button {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -78,4 +78,14 @@ body.home-page {
 
 .start-button:hover {
     background-color: #304c7c;
+}
+
+.default-button {
+    position: static;
+
+}
+
+.bigtitle {
+    color: white;
+    font-size: 10em;
 }
