@@ -22,6 +22,15 @@ questions = {
             "3": ["answer3", "feedback 3"]
         }
     },
+    "3": {
+        "question": "can you answer question 3?",
+        "image": "",
+        "answers": {
+            "1": ["answer1", "feedback 1"],
+            "2": ["answer2", "feedback 2"],
+            "3": ["answer3", "feedback 3"]
+        }
+    }
 }
 
 
@@ -106,7 +115,10 @@ def get_answer():
     question = questions[questionid]
     result = question["answers"][answerid]
 
-    return jsonify({"answer": result})
+    return jsonify({
+        "answer": result, 
+        "numquestions": len(questions)
+    })
 
 
 if __name__ == "__main__":
