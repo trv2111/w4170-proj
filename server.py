@@ -99,6 +99,10 @@ def quiz_answer(questionid, answerid):
     return render_template("quiz-answer.html", questionid=questionid,
         answerid=answerid)
 
+@app.route("/quiz-results")
+def quiz_results():
+    return render_template("quiz-results.html")
+
 @app.route('/get_question', methods=['GET'])
 def get_question():
     global questions
@@ -137,6 +141,16 @@ def update_score():
 
     return jsonify({"result": result})
 
+@app.route('/get_score', methods=['GET'])
+def get_score():
+    global scorekeeper
+
+    score = 0
+    for point in scorekeeper:
+        if point==True:
+            score += 1
+
+    return jsonify({"score": score, "total": len(scorekeeper)})
 
 if __name__ == "__main__":
     app.run(debug=True)

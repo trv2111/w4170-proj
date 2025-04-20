@@ -9,7 +9,7 @@ function getAnswer(id, answerid) {
 			let numquestions = result["numquestions"]
 			$( ".answer" ).append(answer[1])
 			if (id == numquestions) {
-				$( ".answer-btn-container" ).append("<a href='/quizresults' class='default-button'>finish quiz</a>")
+				$( ".answer-btn-container" ).append("<a href='/quiz-results' class='default-button'>finish quiz</a>")
 			}
 			else if (id < numquestions) {
 				console.log(parseInt(id) + 1)
