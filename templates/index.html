@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>4th Down Decision</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% extends "layout.html" %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-</head>
-<body>
-    <!-- Moved Kat's navbar to navbar.html -->
-     {% include 'navbar.html' %}
-    <div>
-        <div class="header">
-            <h2>Make The Call Like An NFL Coach</h2>
-            <h1>4TH DOWN<br><span class="highlight">GO-FOR-IT OR NOT?</span></h1>
-        </div>
-        <a href="/home" class="start-button">Click Here to Start Learning</a>
-        <img src="{{ url_for('static', filename='images/player.png') }}" alt="Football Player" class="player">
+
+{% block content %}
+<div>
+    <div class="header">
+        <h2>Make The Call Like An NFL Coach</h2>
+        <h1>4TH DOWN<br><span class="highlight">GO-FOR-IT OR NOT?</span></h1>
     </div>
-</body>
-</html>
+    <a href="/home" class="start-button">Click Here to Start Learning</a>
+    <img src="{{ url_for('static', filename='images/player.png') }}" alt="Football Player" class="player">
+</div>
+
+{% endblock %}
