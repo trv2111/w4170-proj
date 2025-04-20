@@ -25,6 +25,31 @@ function getAnswer(id, answerid) {
 	});
 }
 
+function updateScore(id, answerid) {
+	$.ajax({
+		type: "POST",
+		url: "/update_score",
+		dataType: "json",
+		contentType: "application/json; charset=utf-8",
+		data: JSON.stringify({"id": id, "answerid": answerid}),
+		success: function(result) {
+			if (result["result"] == true) {
+				$( ".answer" ).append(" CHECKMARK")
+			}
+			else {
+				$( ".answer" ).append(" X-MARK")
+			}
+		},
+		error: function(request, status, error){
+                  console.log("Error");
+                  console.log(request);
+                  console.log(status);
+                  console.log(error);
+         }
+	});
+}
+
 $( function() {
 	getAnswer(questionid, answerid)
+	updateScore(questionid, answerid)
 })

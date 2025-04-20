@@ -8,30 +8,32 @@ questions = {
         "question": "can you answer question 1?",
         "image": "",
         "answers": {
-            "1": ["answer1", "feedback 1"],
-            "2": ["answer2", "feedback 2"],
-            "3": ["answer3", "feedback 3"]
+            "1": ["answer1", "feedback 1", True],
+            "2": ["answer2", "feedback 2", False],
+            "3": ["answer3", "feedback 3", False]
         }
     },
     "2": {
         "question": "can you answer question 2?",
         "image": "",
         "answers": {
-            "1": ["answer1", "feedback 1"],
-            "2": ["answer2", "feedback 2"],
-            "3": ["answer3", "feedback 3"]
+            "1": ["answer1", "feedback 1", True],
+            "2": ["answer2", "feedback 2", False],
+            "3": ["answer3", "feedback 3", False]
         }
     },
     "3": {
         "question": "can you answer question 3?",
         "image": "",
         "answers": {
-            "1": ["answer1", "feedback 1"],
-            "2": ["answer2", "feedback 2"],
-            "3": ["answer3", "feedback 3"]
+            "1": ["answer1", "feedback 1", True],
+            "2": ["answer2", "feedback 2", False],
+            "3": ["answer3", "feedback 3", False]
         }
     }
 }
+
+scorekeeper = [False] * len(questions)
 
 
 @app.context_processor
@@ -119,6 +121,21 @@ def get_answer():
         "answer": result, 
         "numquestions": len(questions)
     })
+
+@app.route('/update_score', methods=['POST'])
+def update_score():
+    global questions
+    global scorekeeper
+    info = request.get_json()
+
+    questionid = info['id']
+    answerid = info['answerid']
+
+    result = questions[questionid]["answers"][answerid][2]
+
+    scorekeeper[int(questionid) - 1] = result
+
+    return jsonify({"result": result})
 
 
 if __name__ == "__main__":
