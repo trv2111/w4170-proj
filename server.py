@@ -1,6 +1,29 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
+
+
+questions = {
+    "1": {
+        "question": "can you answer question 1?",
+        "image": "",
+        "answers": {
+            "1": ["answer1", "feedback 1"],
+            "2": ["answer2", "feedback 2"],
+            "3": ["answer3", "feedback 3"]
+        }
+    },
+    "2": {
+        "question": "can you answer question 2?",
+        "image": "",
+        "answers": {
+            "1": ["answer1", "feedback 1"],
+            "2": ["answer2", "feedback 2"],
+            "3": ["answer3", "feedback 3"]
+        }
+    },
+}
+
 
 @app.context_processor
 def inject_request():
