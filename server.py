@@ -72,7 +72,7 @@ def learn_field_position():
 # Dany
 @app.route("/learn/yards-to-go")
 def learn_yards_to_go():
-    return render_template("")
+    return render_template("yardstogo.html")
 
 # Connor
 @app.route("/learn/time-score")
