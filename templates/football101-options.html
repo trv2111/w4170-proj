@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div row="row">
+        On 4th down, coaches must choose between three options:
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <img src="/static/images/go-for-it.png">
+        </div>
+        <div class="col-4">
+            <img src="/static/images/FieldGoal.png">
+        </div>
+        <div class="col-4">
+            <img src="/static/images/Football.png">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            Go For It 
+        </div>
+        <div class="col-4">
+            Kick a FG 
+        </div>
+        <div class="col-4">
+            Punt Kick 
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4">
+            Try to gain the yards and reset to 1st down
+        </div>
+        <div class="col-4">
+            Take a shot at 3 points if close enough
+        </div>
+        <div class="col-4">
+            Kick it deep to give the other team worse field position
+        </div>
+    </div>
+</div>
+
+<div class="bottom-buttons-Container">
+    <a href="/football101">
+        <button class="bottom-buttons">Go Back</button>
+    </a>
+    <a href="/learn">
+        <button class="bottom-buttons">Next</button>
+    </a>
+</div>
+{% endblock %}
