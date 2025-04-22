@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+<style>
+    .sliderbody {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      justify-content: center;
+    }
+
+
+    .track-container {
+        position: relative;
+        width: 80%;
+        height: 60px;
+        margin-bottom: 40px;
+    }
+
+    .track {
+        background-color: #1f2942;
+        height: 12px;
+        border-radius: 6px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 1;
+    }
+
+    input[type=range] {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .football {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        z-index: 3;
+        pointer-events: none; 
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        transform: translateX(-50%);
+        text-align: center;
+        font-weight: bold;
+        color: #1f2942;
+        z-index: 4;
+        pointer-events: none;
+}
+
+
+
+
+
+  </style>
+
+<div class="container">
+    <div class="row">
+        Yards to Go
+    </div>
+    <div class="row">
+        The odds of converting a fourth down increase with a shorter distance. Slide the bar to see how conversion odds change from 1 yard to 10.
+    </div>    
+</div>
+<div class="sliderbody">
+    <div class="track-container">
+        <div class="track"></div>
+        <input type="range" min="1" max="10" value="10" id="slider">
+        <img id="football" src="/static/images/Football.png" class="football">
+        <div id="text" class="text-overlay">4th & 10<br>27.8% Success</div>
+    </div>
+</div>
+
+
+
+<div class="bottom-buttons-Container">
+    <a href="/learn">
+        <button class="bottom-buttons">Go Back</button>
+    </a>
+    <a href="/time-left">
+        <button class="bottom-buttons">Next</button>
+    </a>
+</div>
+
+<script type="text/javascript" src="/static/slider.js"></script>
+
+{% endblock %}
