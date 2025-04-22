@@ -144,3 +144,37 @@ body.home-page {
 .zone-3-info {background-color: #6b8e23; }
 .zone-4-info {background-color: #4682b4; }
 .zone-5-info {background-color: #6a5acd; }
+
+
+.middle-container{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.middle-center-text {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+.bottom-buttons-Container{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.bottom-buttons{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #1f2c4c;
+    color: white;
+    border-radius: 10px;
+}
+
