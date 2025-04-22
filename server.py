@@ -54,6 +54,10 @@ def home():
 @app.route("/football101")
 def football101():
     return render_template("football101.html")
+    
+@app.route("/football101-options")
+def football101_options():
+    return render_template("football101-options.html")
 
 # Terre
 @app.route("/learn")
