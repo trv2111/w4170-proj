@@ -39,6 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("headline").textContent = `You called timeout at ${timeText}.`;
         document.getElementById("scenario-text").innerText =
             "Now the other team must run a play. If they don’t convert, you’ll get another chance.";
+        // Insert player image
+        const imgContainer = document.createElement("div");
+        imgContainer.className = "mt-4";
+        imgContainer.innerHTML = `
+            <img src="/static/images/players_with_space.png" alt="Players" class="img-fluid mt-3" style="max-width: 300px;">
+        `;
+        document.querySelector(".timeouts-section").appendChild(imgContainer);
+
     
         // Show Next button
         const nextBtn = document.createElement("button");
