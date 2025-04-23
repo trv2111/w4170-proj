@@ -77,7 +77,7 @@ def learn_yards_to_go():
 # Connor
 @app.route("/learn/time-score")
 def learn_time_score():
-    return render_template("")
+    return render_template("learn_time_score.html")
 
 # Terre
 @app.route("/learn/timeouts")
@@ -91,7 +91,7 @@ def timeout_step2():
 # Connor
 @app.route("/summary")
 def summary():
-    return render_template("")
+    return render_template("summary.html")
 
 # Kat
 @app.route("/quiz")
@@ -159,6 +159,14 @@ def get_score():
             score += 1
 
     return jsonify({"score": score, "total": len(scorekeeper)})
+
+import os
+
+@app.route("/debug-templates")
+def debug_templates():
+    templates_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+    files = os.listdir(templates_path)
+    return "<br>".join(files)
 
 if __name__ == "__main__":
     app.run(debug=True)

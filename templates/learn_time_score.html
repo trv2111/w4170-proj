@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="middle-container">
+  <div>
+    <h2 class="middle-center-text">Time Left & Score</h2>
+    <p>You're the home team! Click on a scoreboard below to reveal what a coach might do based on the situation.</p>
+
+    <div class="scoreboard-row">
+      <img src="{{ url_for('static', filename='images/quiz_scoreboard_1.png') }}" class="scoreboard" id="score1" alt="Scoreboard 1">
+      <img src="{{ url_for('static', filename='images/quiz_scoreboard_2.png') }}" class="scoreboard" id="score2" alt="Scoreboard 2">
+      <img src="{{ url_for('static', filename='images/quiz_scoreboard_3.png') }}" class="scoreboard" id="score3" alt="Scoreboard 3">
+    </div>
+
+    <div id="score-info-box" class="scenario-box">
+      <h3>Time Left & Score Strategy</h3>
+      <p>Click a scoreboard above to view a smart coaching decision.</p>
+    </div>
+
+    <div class="bottom-buttons-Container">
+      <a href="/learn"><button class="bottom-buttons">Go Back</button></a>
+      <a href="/summary"><button class="bottom-buttons">Next</button></a>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='scoreboards.js') }}"></script>
+{% endblock %}

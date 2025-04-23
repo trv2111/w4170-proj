@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="middle-container">
+  <div class="summary-content">
+    <h2>In summary, follow this checklist to think like a coach:</h2>
+
+    <div class="checklist">
+      <div class="checklist-row" data-modal="modal1"><span class="checkbox" id="box1">❎</span> Can I convert this?</div>
+      <div class="checklist-row" data-modal="modal2"><span class="checkbox" id="box2">❎</span> Can I trust my kicker?</div>
+      <div class="checklist-row" data-modal="modal3"><span class="checkbox" id="box3">❎</span> How many chances will I get after this?</div>
+      <div class="checklist-row" data-modal="modal4"><span class="checkbox" id="box4">❎</span> What happens if I fail?</div>
+    </div>
+
+    <div class="bottom-buttons-Container">
+      <a href="/learn"><button class="bottom-buttons">Go Back</button></a>
+      <a href="/quiz"><button class="bottom-buttons">Next</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <h3>Can I convert this?</h3>
+    <p>Shorter Yardage = Higher Odds. 4th & 1 is likely to convert, but 4th & 9 isn’t so easy.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <h3>Can I trust my kicker?</h3>
+    <p>Even if you are in range, is your kicker consistent? Is the weather affecting things?</p>
+  </div>
+</div>
+
+<div class="modal" id="modal3">
+  <div class="modal-content">
+    <h3>How many chances will I get after this?</h3>
+    <p>How much time is left? Do I have timeouts? If not, this might be your last shot.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal4">
+  <div class="modal-content">
+    <h3>What happens if I fail?</h3>
+    <p>Field position matters. A failure could be the difference between handing your opponent the ball at the 20-yard line or the 70-yard line.</p>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='summary.js') }}"></script>
+{% endblock %}
