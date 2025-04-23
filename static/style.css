@@ -263,6 +263,11 @@ body.home-page {
     color: white;
     border-radius: 10px;
 }
+.img-resize{
+   max-width: 300px;
+    max-height:300px; 
+}
+
 .scoreboard-row {
     display: flex;
     justify-content: center;
