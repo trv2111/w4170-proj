@@ -6,7 +6,9 @@ function getQuestion(id) {
 		data: {"id": id},
 		success: function(result) {
 			let question = result["question"]
+			let image = result["image"]
 
+			$( ".question" ).append("<img class='scoreboard-quiz' src='" + image + "'><br>")
 			$( ".question" ).append(question["question"])
 			Object.entries(question["answers"]).forEach(([answerid, answer]) => {
 				$( ".question-btn-container" ).append(

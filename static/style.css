@@ -355,3 +355,8 @@ body.home-page {
     background-color: #1f2c4c;
     color: white;
 }
+
+.scoreboard-quiz {
+    width: 18em;
+    height: auto;
+}
