@@ -78,6 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     
         document.querySelector(".timeouts-section").appendChild(imgContainer);
+
+        // Add final Next button
+        const finalNext = document.createElement("a");
+        finalNext.href = "/learn/finished";
+        finalNext.className = "btn btn-primary mt-4";
+        finalNext.innerText = "Next";
+        document.getElementById("button-group").appendChild(finalNext);
     }
     
     

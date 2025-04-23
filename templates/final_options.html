@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="timeouts-section text-center py-4">
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 80vh;">
+        <h4 class="mb-3">Congratulations! You finished this course on <em>4<sup>th</sup> Down <strong>Go–For–It</strong> Decision Making.</em></h4>
+
+        <p class="mb-4">You may either review a summary of the course or take the quiz.</p>
+
+        <div class="d-flex flex-wrap justify-content-center mb-4 gap-3">
+            <a href="/summary" class="btn btn-lg btn-dark mx-2 px-5 py-3" style="border-radius: 20px;">
+                Go to <br><strong>Summary</strong>
+            </a>
+            <a href="/quiz" class="btn btn-lg btn-dark mx-2 px-5 py-3" style="border-radius: 20px;">
+                Go to <br><strong>Quiz!</strong>
+            </a>
+        </div>
+
+        <a href="/home" class="btn btn-secondary">Go Back</a>
+    </div>
+
+    <div class="mt-5">
+        <img src="{{ url_for('static', filename='images/celebration.png') }}" alt="Celebrating Fans" class="img-fluid" style="max-width: 300px;">
+    </div>
+</div>
+{% endblock %}

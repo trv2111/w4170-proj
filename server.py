@@ -85,6 +85,10 @@ def timeouts():
 def timeout_step2():
     return render_template("timeouts_stage2.html")
 
+@app.route("/learn/finished")
+def learn_finished():
+    return render_template("final_options.html")
+
 # Connor
 @app.route("/summary")
 def summary():
