@@ -69,8 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         imgContainer.className = "mt-4";
     
         imgContainer.innerHTML = `
-            <img src="/static/images/players_hugging.png" alt="Players Celebrating" class="img-fluid" style="max-width: 400px;">
-            <br>
             <img src="/static/images/trophy.png" alt="Trophy" class="img-fluid mt-3" style="max-width: 150px;">
         `;
     

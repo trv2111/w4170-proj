@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.startNoTimeoutScenario = function () {
         // Hide the initial button
         document.getElementById("start-btn").classList.add("d-none");
+        document.getElementById("skip-btn").classList.remove("d-none");
 
         // Show the timeout button (still disabled)
         const timeoutBtn = document.getElementById("timeout-btn");
@@ -37,4 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         startCountdown();
     };
+
+    window.skipToEnd = function () {
+        clearInterval(intervalId);
+        time = 0;
+        updateClock();
+    
+        document.getElementById("timeout-btn").classList.add("d-none");
+        document.getElementById("skip-btn").classList.add("d-none");
+        document.getElementById("rewind-btn").classList.remove("d-none");
+    
+        document.getElementById("headline").textContent = "The clock hit zero.";
+        document.getElementById("scenario-text").textContent =
+            "You had 1 timeout but never used it. Your team never got the ball back. Game over.";
+    };
+    
 });

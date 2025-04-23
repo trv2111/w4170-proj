@@ -178,3 +178,13 @@ body.home-page {
     border-radius: 10px;
 }
 
+#skip-btn {
+    margin-left: 1rem;
+    border-color: #1f2c4c;
+    color: #1f2c4c;
+}
+
+#skip-btn:hover {
+    background-color: #1f2c4c;
+    color: white;
+}
