@@ -9,14 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function startCountdown() {
         updateClock();
+        document.getElementById("timeout-btn").classList.remove("d-none");
+        document.getElementById("timeout-btn").disabled = false;
         intervalId = setInterval(() => {
             time--;
             updateClock();
-
-            if (time === 28) {
-                document.getElementById("timeout-btn").classList.remove("d-none");
-                document.getElementById("timeout-btn").disabled = false;
-            }
 
             if (time <= 0 && !timeoutCalled) {
                 clearInterval(intervalId);
