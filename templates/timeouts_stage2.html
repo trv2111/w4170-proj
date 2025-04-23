@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="timeouts-section text-center py-4">
+    <div class="scoreboard mx-auto mb-4">
+        <div class="score-line">HOME: 20 | VISITOR: 23</div>
+        <div id="clock" class="clock">0:30</div>
+        <div class="score-details">DOWN: 4 | TO GO: 2 | BALL ON: 33 | QTR: 4</div>
+    </div>
+
+    <div id="timeout-message" class="mb-4">
+        <h2 id="headline">Save the Game!</h2>
+        <p id="scenario-text">
+            You have one timeout left. Call it before the clock runs out!
+        </p>
+    </div>
+
+    <div id="button-group">
+        <button id="timeout-btn" class="btn btn-dark d-none" onclick="callTimeout()" disabled>Call Timeout</button>
+        <button id="rewind-btn" class="btn btn-primary d-none" onclick="window.location.href='/learn/timeouts/try-again'">Try Again</button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='timeouts_stage2.js') }}"></script>
+{% endblock %}

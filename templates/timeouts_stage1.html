@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="timeouts-section text-center py-4">
+    <div class="scoreboard mx-auto mb-4">
+        <div class="score-line">HOME: 20 | VISITOR: 23</div>
+        <div id="clock" class="clock">0:30</div>
+        <div class="score-details">DOWN: 4 | TO GO: 2 | BALL ON: 33 | QTR: 4</div>
+    </div>
+
+    <div id="timeout-message" class="mb-4">
+        <h2 id="headline">It All Comes Down to This.</h2>
+        <p id="scenario-text">
+            Your team is down by 3. The other team has the ball.<br>
+            It’s 4th down with only 30 seconds left.<br>
+            They don’t <em>need</em> to run a play – they can just let the clock run out.<br><br>
+            You have 1 timeout. Can you use it wisely?
+        </p>
+    </div>
+
+    <div id="button-group">
+        <button id="start-btn" class="btn btn-primary" onclick="startNoTimeoutScenario()">Watch What Happens When You Don’t Call a Timeout</button>
+        <button id="timeout-btn" class="btn btn-dark d-none" disabled>Call Timeout</button>
+        <button id="rewind-btn" class="btn btn-primary d-none" onclick="window.location.href='/learn/timeouts/try-again'">Rewind Time</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='timeouts_stage1.js') }}"></script>
+{% endblock %}

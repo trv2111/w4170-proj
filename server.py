@@ -82,7 +82,11 @@ def learn_time_score():
 # Terre
 @app.route("/learn/timeouts")
 def timeouts():
-    return render_template("timeouts.html")
+    return render_template("timeouts_stage1.html")
+
+@app.route("/learn/timeouts/try-again")
+def timeout_step2():
+    return render_template("timeouts_stage2.html")
 
 # Connor
 @app.route("/summary")
