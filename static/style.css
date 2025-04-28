@@ -173,7 +173,7 @@ body.home-page {
 
 .bigtitle {
     color: white;
-    font-size: 10em;
+    font-size: 80px;
 }
 
 
@@ -189,7 +189,7 @@ body.home-page {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    height: 70vh;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -204,7 +204,7 @@ body.home-page {
     top: 0;
     bottom: 0;
     opacity: 0.5;
-    height: 82%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -223,6 +223,8 @@ body.home-page {
     margin-right: auto;
     border: .3rem solid white;
     color: white;
+    padding: 5px;
+    margin-top: 1em;
 }
 
 .zone-1-info {background-color: #cd5c5c; }
@@ -231,6 +233,27 @@ body.home-page {
 .zone-4-info {background-color: #4682b4; }
 .zone-5-info {background-color: #6a5acd; }
 
+.zone-title {
+    font-size: 22px;
+    font-weight: bold;;
+}
+
+.normal-button {
+    position: static;
+    top: 30px;
+    right: 30px;
+    background-color: #1f2c4c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.normal-button:hover {
+    background-color: #304c7c;
+}
 
 .middle-container{
     margin: 0;
