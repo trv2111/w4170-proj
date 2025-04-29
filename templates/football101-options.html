@@ -1,6 +1,35 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+<style>
+.footballmodal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+  background-color: #1f2c4c;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #888;
+  width: 50%;
+  border-radius: 10px;
+}
+
+
+</style>
+
+<script src="static/football101-options.js"></script>
+
 <div class="container">
     <div class="row middle-center-text">
         On 4th down, coaches must choose between three options:
@@ -8,13 +37,13 @@
 
     <div class="row">
         <div class="col-4">
-            <img class="img-resize" src="/static/images/go-for-it.png">
+            <button  id="goForItBtn" class="football101buttons"><img class="img-resize" src="/static/images/go-for-it.png"></button>
         </div>
         <div class="col-4">
-            <img class="img-resize" src="/static/images/FieldGoal.png">
+            <button id="fieldGoalBtn" class="football101buttons"><img class="img-resize" src="/static/images/FieldGoal.png"></button>
         </div>
         <div class="col-4">
-            <img class="img-resize" src="/static/images/Football.png">
+            <button id="puntBtn" class="football101buttons"><img class="img-resize" src="/static/images/Football.png"></button>
         </div>
     </div>
 
@@ -51,4 +80,27 @@
         <button class="bottom-buttons">Next</button>
     </a>
 </div>
+
+<!-- Modals Section -->
+<div id="goForItModal" class="footballmodal">
+    <div class="modal-content">
+      <span class="close" id="closeGoForIt"></span>
+      <img src="static/images/goforit.gif" alt="Go for it">
+    </div>
+    </div>
+    
+    <div id="fieldGoalModal" class="footballmodal">
+    <div class="modal-content">
+      <span class="close" id="closeFieldGoal"></span>
+      <img src="static/images/FieldGoal.gif" alt="Field Goal">
+    </div>
+    </div>
+    
+    <div id="puntModal" class="footballmodal">
+    <div class="modal-content">
+      <span class="close" id="closePunt"></span>
+      <img src="static/images/punt.gif" alt="Punt">
+    </div>
+</div>
+    
 {% endblock %}
