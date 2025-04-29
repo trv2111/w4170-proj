@@ -1,10 +1,23 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+<script src="static/downsimulator.js"></script>
 <div class="middle-container">
     <h1 class="middle-center-text">
-        In American football, the offense gets four chances (called downs) to move the ball 10 yards. If they succeed, they earn a new set of downs and keep going to try to score a touchdown for 7 points.
+        In American football, the <span style="color: #FDFD96">offense</span> gets <span style="color:#FDFD96">four chances</span> (called <span style="color:#FDFD96">downs</span>) to move the ball <span style="color:#FDFD96">10 yards</span>. If they succeed, they earn a new set of downs and keep going to try to score a <span style="color:#FDFD96">touchdown</span> for 7 points.
     </h1>
+</div>
+<div>
+    <div id="downDisplay">1st Down & 10 yards to go</div>
+
+    <button id="actionButton" class="back-button">Next Play</button>
+</div>
+
+<div id="field">
+<div>
+    <img src="{{ url_for('static', filename='images/footballplayer.png') }}" id="runningback" alt="Football Player">
+</div>
 </div>
 
 <div class="bottom-buttons-Container">
