@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Big Sohulders', sans-serif;
     height: 100%;
     overflow: hidden;
     background-image: url('/static/images/field.png');
@@ -28,11 +28,13 @@ body.home-page {
 .navbar-brand {
     padding-left: 2em;
     color: white !important;
+    font-size: 1.6em;
 }
 
 .nav-link {
     color: white !important;
     padding-left: 4em !important;
+    font-size: 1.6em;
 }
 
 .header {
@@ -40,13 +42,15 @@ body.home-page {
 }
 
 .header h2 {
-    font-weight: 300;
-    font-size: 1.2em;
+    font-weight: 600;
+    font-size: 2.2em;
     color: #f0f0f0;
+    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    /*black letter outline */
 }
 
 .header h1 {
-    font-size: 3em;
+    font-size: 6em;
     font-weight: 700;
     margin: 0;
     line-height: 1.2;
@@ -56,7 +60,7 @@ body.home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     padding: 60px 0;
 }
 
@@ -64,13 +68,16 @@ body.home-page {
     background-color: #1f2c4c;
     color: white;
     text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 10px;
+    padding: 15px 70px;
+    border-radius: 10px
+    flex-direction: row;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.2rem;
+    font-size: 2.2rem
+    width: 500px;
+    height: 80px;
 }
 
 .home-btn:hover {
