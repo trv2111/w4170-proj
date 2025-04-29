@@ -14,6 +14,7 @@
 .lightGrey{
     color: #ededed;
 }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -60,9 +61,6 @@ body.home-page {
 .header h2 {
     font-weight: 600;
     font-size: 2.2em;
-    color: #f0f0f0;
-    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    /*black letter outline */
 }
 
 .header h1 {
@@ -82,7 +80,6 @@ body.home-page {
 
 .home-btn {
     background-color: #1f2c4c;
-    color: white;
     text-decoration: none;
     padding: 15px 70px;
     border-radius: 10px;
@@ -185,7 +182,6 @@ body.home-page {
     top: 80px;
     right: 30px;
     background-color: #1f2c4c;
-    color: white;
     padding: 14px 20px;
     border-radius: 20px;
     text-decoration: none;
@@ -302,7 +298,6 @@ body.home-page {
 .middle-center-text {
     font-size: 50px;
     font-weight: bold;
-    color: whitesmoke;
   }
 
 .bottom-buttons-Container{
