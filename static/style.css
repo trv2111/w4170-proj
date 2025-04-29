@@ -1,3 +1,19 @@
+/*Colors*/
+.baseColor{
+    color: #b6d6c7
+}
+
+.accentColor{
+    color:#1f2c4c;
+}
+
+.darkGrey{
+    color: #515151;
+}
+
+.lightGrey{
+    color: #ededed;
+}
 body, html {
     margin: 0;
     padding: 0;
