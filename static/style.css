@@ -473,6 +473,27 @@ body.home-page {
     width: 70%;
 }
 
+.score {
+    font-size: 230px;
+    font-weight: bold;
+}
+
+.results-container {
+    padding-top: 8em;
+}
+
+.results-text {
+    padding-top: 3em;
+    text-align: left;
+    font-size: 25px;
+    padding-right: 1em;
+}
+
+.results-btn-container {
+    text-align: right;
+    padding-right: 2em;
+}
+
 .football101buttons{
     background :none;
     border: none;
