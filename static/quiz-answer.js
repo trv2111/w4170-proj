@@ -9,11 +9,11 @@ function getAnswer(id, answerid) {
 			let numquestions = result["numquestions"]
 			$( ".answer" ).append(answer[1])
 			if (id == numquestions) {
-				$( ".answer-btn-container" ).append("<a href='/quiz-results' class='default-button'>finish quiz</a>")
+				$( ".answer-btn-container" ).append("<a href='/quiz-results' class='default-button'>See Results</a>")
 			}
 			else if (id < numquestions) {
 				console.log(parseInt(id) + 1)
-				$( ".answer-btn-container" ).append("<a href='/quiz-question/" + String(parseInt(id)+1) + "' class='default-button'>next question</a>")
+				$( ".answer-btn-container" ).append("<a href='/quiz-question/" + String(parseInt(id)+1) + "' class='default-button'>Next</a>")
 			}
 		},
 		error: function(request, status, error){
@@ -34,10 +34,10 @@ function updateScore(id, answerid) {
 		data: JSON.stringify({"id": id, "answerid": answerid}),
 		success: function(result) {
 			if (result["result"] == true) {
-				$( ".answer" ).append(" CHECKMARK")
+				$( ".answer-image" ).append("<img class = 'celebimage' src='" + celebration + "'>")
 			}
 			else {
-				$( ".answer" ).append(" X-MARK")
+				$( ".answer-image" ).append(" X-MARK")
 			}
 		},
 		error: function(request, status, error){

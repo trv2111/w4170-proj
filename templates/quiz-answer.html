@@ -5,15 +5,21 @@
 <script>
     var questionid = "{{questionid}}"
     var answerid="{{answerid}}"
+    var celebration = "{{ url_for('static', filename='images/celebration.png') }}"
+    var failure = "{{ url_for('static', filename='images/celebration.png') }}"
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz-answer.js') }}"></script>
 
-<div class="answer">
-</div>
-<br>
-<br>
-<div class="answer-btn-container">
+<div class="answer-container row">
+    <div class="col-6">
+        <div class="darkGrey answer-text answer"></div>
+        <br>
+        <br>
+        <div class="answer-btn-container"></div>
+    </div>
+    <div class="col-6 answer-image">
+    </div>
 </div>
 
 {% endblock %}

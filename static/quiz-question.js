@@ -12,7 +12,7 @@ function getQuestion(id) {
 				<div class="row">
 					<div class='col-6'><img class='scoreboard-quiz' src='${image}'><br></div>
 					<div class='col-6'>
-						<div class='row question-title lightGrey'>Question ${id}</div>
+						<div class='row question-title green'>Question ${id}</div>
 						<div class='row question-text darkGrey'>${question['question']}</div><br>
 						<div class='row'>
 			`
