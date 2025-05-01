@@ -7,13 +7,13 @@ questions = {
     "1": {
         "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:<br>You are on the opponent’s 45-yard line. It’s 4th & 2. You are down by 4 with 6 minutes left in the 4th quarter. What do you do?",
         "answers": {
-            "1": ["Go For It", "Great call! There’s a high conversion chance, we weren’t in field goal range, and punting gives away momentum when you’re losing late.\nCongratulations! You made the aggressive call – and it worked! You kept the drive alive and gave your team a shot to win!", True],
+            "1": ["Go For It", "Great call! There’s a high conversion chance, we weren’t in field goal range, and punting gives away momentum when you’re losing late.<br>Congratulations! You made the aggressive call – and it worked! You kept the drive alive and gave your team a shot to win!", True],
             "2": ["Kick", "This would be about a 62-yard attempt and is outside of your kicker’s range. Even if it went in, you’d still be behind by 1. This wasn’t the best move here.", False],
             "3": ["Punt", "feedback 3", False]
         }
     },
     "2": {
-        "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:\nYou are on your own 28-yard line. It’s 4th & 7. You are up by 3 with 4:50 left in the 4th quarter. The opponent has all 3 timeouts. What do you do?\n\nDilemma: You’re in the lead, but not by much. It’s 4th & long, and you’re deep in your own territory. There’s still plenty of time, so you would need to trust your defense.",
+        "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:<br>You are on your own 28-yard line. It’s 4th & 7. You are up by 3 with 4:50 left in the 4th quarter. The opponent has all 3 timeouts. What do you do?<br>Dilemma: You’re in the lead, but not by much. It’s 4th & long, and you’re deep in your own territory. There’s still plenty of time, so you would need to trust your defense.",
         "answers": {
             "1": ["Go For It", "Too risky here! Even if you want to stay aggressive, the odds are low. A failed attempt gives the opponent the ball in field goal range with a chance to score.", False],
             "2": ["Kick", "feedback 2", False],
@@ -21,7 +21,7 @@ questions = {
         }
     },
     "3": {
-        "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:\nYou are on your opponent’s 37-yard line. It’s 4th & 4. You are tied with 1:10 left in the 4th quarter. You have 2 timeouts. What do you do?",
+        "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:<br>You are on your opponent’s 37-yard line. It’s 4th & 4. You are tied with 1:10 left in the 4th quarter. You have 2 timeouts. What do you do?",
         "answers": {
             "1": ["Go For It", "feedback 1", False],
             "2": ["Kick", "Clutch kick – right call! With the game tied and little time left, taking the lead matters. A 55-yard kick isn’t easy, but it gives you a chance to win now. If your kicker has the leg, this is the best balance of risk and reward.", True],
