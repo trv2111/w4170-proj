@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 questions = {
     "1": {
-        "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:\nYou are on the opponent’s 45-yard line. It’s 4th & 2. You are down by 4 with 6 minutes left in the 4th quarter. What do you do?",
+        "question": "Evaluate the following 4th down scenario using field position, distance, score, and time:<br>You are on the opponent’s 45-yard line. It’s 4th & 2. You are down by 4 with 6 minutes left in the 4th quarter. What do you do?",
         "answers": {
             "1": ["Go For It", "Great call! There’s a high conversion chance, we weren’t in field goal range, and punting gives away momentum when you’re losing late.\nCongratulations! You made the aggressive call – and it worked! You kept the drive alive and gave your team a shot to win!", True],
             "2": ["Kick", "This would be about a 62-yard attempt and is outside of your kicker’s range. Even if it went in, you’d still be behind by 1. This wasn’t the best move here.", False],

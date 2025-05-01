@@ -8,13 +8,19 @@ function getQuestion(id) {
 			let question = result["question"]
 			let image = result["image"]
 
-			$( ".question" ).append("<img class='scoreboard-quiz' src='" + image + "'><br>")
-			$( ".question" ).append(question["question"])
+			appended = `
+				<div class="row">
+					<div class='col-6'><img class='scoreboard-quiz' src='${image}'><br></div>
+					<div class='col-6'>
+						<div class='row question-title lightGrey'>Question ${id}</div>
+						<div class='row question-text darkGrey'>${question['question']}</div><br>
+						<div class='row'>
+			`
 			Object.entries(question["answers"]).forEach(([answerid, answer]) => {
-				$( ".question-btn-container" ).append(
-					"<a href='/quiz-answer/" + id + "/" + answerid + "' class='default-button'>" + answer[0] + "</a>"
-				)
+				appended += "<a href='/quiz-answer/" + id + "/" + answerid + "' class='default-button quiz-btn'>" + answer[0] + "</a>"
 			});
+			appended += "</div></div></div>"
+			$( ".question" ).append(appended)
 		},
 		error: function(request, status, error){
                   console.log("Error");

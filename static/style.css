@@ -188,11 +188,18 @@ body.home-page {
     font-weight: bold;
     font-size: 20px;
     transition: background-color 0.3s ease;
+    color: #ededed;
 }
 
-.start-button:hover {
+.defaultbutton:visited {
+    color: inherit;
+    background-color: inherit;
+}
+
+.start-button:hover, .default-button:hover {
     background-color: #304c7c;
     color: white; 
+    text-decoration: none;
 
 }
 
@@ -422,8 +429,27 @@ body.home-page {
 }
 
 .scoreboard-quiz {
-    width: 18em;
+    width: 80%;
+    padding-top: 3em;
     height: auto;
+}
+
+.question-title {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2em;
+}
+
+.quiz-btn {
+    margin-right: 2em;
+}
+
+.question-text {
+    font-family: Helvetica Neue !important;
+    text-align: left;
+    padding-right: 1em;
+    font-size: 20px;
 }
 
 .football101buttons{
