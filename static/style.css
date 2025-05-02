@@ -124,7 +124,9 @@ body.home-page {
 
 }
 
-
+.learn-card.visited {
+    opacity: 0.5;
+}
 .learn-page {
     background-color: none;
     min-height: 100vh;
