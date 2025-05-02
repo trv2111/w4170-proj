@@ -32,6 +32,8 @@ questions = {
 
 scorekeeper = [False] * len(questions)
 
+visited_pages = []
+
 
 @app.context_processor
 def inject_request():
@@ -59,26 +61,34 @@ def football101_options():
 # Terre
 @app.route("/learn")
 def learn():
-    return render_template("learn.html")
+    return render_template("learn.html", visited=visited_pages)
 
-# Kat
+
 @app.route("/learn/field-position")
-def learn_field_position():
+def field_position():
+    if "field-position" not in visited_pages:
+        visited_pages.append("field-position")
     return render_template("fieldposition.html")
 
 # Dany
 @app.route("/learn/yards-to-go")
 def learn_yards_to_go():
+    if "yards-to-go" not in visited_pages:
+        visited_pages.append("yards-to-go")
     return render_template("yardstogo.html")
 
 # Connor
 @app.route("/learn/time-score")
 def learn_time_score():
+    if "time-score" not in visited_pages:
+        visited_pages.append("time-score")
     return render_template("learn_time_score.html")
 
 # Terre
 @app.route("/learn/timeouts")
 def timeouts():
+    if "timeouts" not in visited_pages:
+        visited_pages.append("timeouts")
     return render_template("timeouts_stage1.html")
 
 @app.route("/learn/timeouts/try-again")
