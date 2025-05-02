@@ -1,15 +1,12 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
-
-
 <style>
     .sliderbody {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100vh;
+      height: 60vh;
       justify-content: center;
     }
 
@@ -23,7 +20,7 @@
 
     .track {
         background-color: #1f2942;
-        height: 12px;
+        height: 20px;
         border-radius: 6px;
         position: absolute;
         top: 50%;
@@ -47,14 +44,14 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 60px;
+        width: 80px;
         z-index: 3;
         pointer-events: none; 
     }
 
     .text-overlay {
         position: absolute;
-        top: -40px;
+        top: -70px;
         left: 0;
         transform: translateX(-50%);
         text-align: center;
@@ -62,20 +59,20 @@
         color: #1f2942;
         z-index: 4;
         pointer-events: none;
-}
-
-
-
-
+    }
+    .learnText{
+        font-size: 30px;
+        font-weight: bold ;
+    }
 
   </style>
 
-<div class="container">
-    <div class="row middle-center-text d-flex justify-content-center">
+<div class="container"><br>
+    <div style="font-size: 60px;" class="row middle-center-text d-flex justify-content-center darkGrey">
         Yards to Go
     </div>
-    <div class="row d-flex justify-content-center">
-        The odds of converting a fourth down increase with a shorter distance. Slide the bar to see how conversion odds change from 1 yard to 10.
+    <div class="row d-flex justify-content-center lightGrey learnText">
+        The odds of converting a fourth down increase with a shorter distance. Slide the bar to see how conversion odds change from 1 yard to 10 yards.
     </div>    
 </div>
 <div class="sliderbody">
@@ -83,11 +80,9 @@
         <div class="track"></div>
         <input type="range" min="1" max="10" value="10" id="slider">
         <img id="football" src="/static/images/Football.png" class="football">
-        <div id="text" class="text-overlay">4th & 10<br>27.8% Success</div>
+        <div id="text" class="text-overlay darkGrey">4th & 10<br>27.8% Success</div>
     </div>
 </div>
-
-
 
 <div class="bottom-buttons-Container">
     <a href="/learn">
