@@ -8,11 +8,11 @@
 }
 
 .darkGrey{
-    color: #515151;
+    color: #424141;
 }
 
 .lightGrey{
-    color: #ededed;
+    color: #908f8f;
 }
 
 .green{
@@ -496,11 +496,15 @@ body.home-page {
 
 .football101buttons{
     background :none;
-    border: none;
+    border-radius: 20px;
+    border-color:#1f2c4c ;
+    height: 300px;
+    width: 320px;
+
 }
 
 .football101buttons:hover{
-    background-color: #304c7c;
+    background-color: #1f2c4c;
 
 }
 
