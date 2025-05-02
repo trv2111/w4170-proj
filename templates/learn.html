@@ -6,22 +6,22 @@
     <h2 style="font-size:40px" class="darkGrey">What should a coach consider on 4<sup>th</sup> down?<br> Click on each of the following aspects to visualize the consideration:</h2>
 
     <div class="learn-grid">
-        <a href="/learn/field-position" class="learn-card">
+        <a href="/learn/field-position" class="learn-card {% if 'field-position' in visited %}visited{% endif %}">
             <h3>Field Position</h3>
             <img src="{{ url_for('static', filename='icons/field_position.png') }}" alt="Field Position">
         </a>
 
-        <a href="/learn/yards-to-go" class="learn-card">
+        <a href="/learn/yards-to-go" class="learn-card {% if 'yards-to-go' in visited %}visited{% endif %}">
             <h3>Yards to Go</h3>
             <img src="{{ url_for('static', filename='icons/yards_slidebar.png') }}" alt="Yards to Go">
         </a>
 
-        <a href="/learn/time-score" class="learn-card">
+        <a href="/learn/time-score" class="learn-card {% if 'time-score' in visited %}visited{% endif %}">
             <h3>Time Left & Score</h3>
             <img src="{{ url_for('static', filename='icons/time_left_and_score.png') }}" alt="Time & Score">
         </a>
 
-        <a href="/learn/timeouts" class="learn-card">
+        <a href="/learn/timeouts" class="learn-card {% if 'timeouts' in visited %}visited{% endif %}">
             <h3>Timeouts</h3>
             <img src="{{ url_for('static', filename='icons/timeouts.png') }}" alt="Timeouts">
         </a>
