@@ -278,7 +278,8 @@ body.home-page {
 
 .zone-title {
     font-size: 22px;
-    font-weight: bold;;
+    font-weight: bold;
+    font-family: 'Big Shoulders', sans-serif;
 }
 
 .normal-button {
