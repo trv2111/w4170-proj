@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add final Next button
         const finalNext = document.createElement("a");
-        finalNext.href = "/learn/finished";
+        finalNext.href = "/learn/timeouts/final";
         finalNext.className = "btn btn-primary mt-4";
         finalNext.innerText = "Next";
         document.getElementById("button-group").appendChild(finalNext);

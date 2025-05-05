@@ -95,6 +95,10 @@ def timeouts():
 def timeout_step2():
     return render_template("timeouts_stage2.html")
 
+@app.route("/learn/timeouts/final")
+def timeouts_final():
+    return render_template("timeouts_final.html")
+
 @app.route("/learn/finished")
 def learn_finished():
     return render_template("final_options.html")

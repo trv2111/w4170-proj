@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="timeouts-section text-center py-5">
+    <h2 class="mb-4">This is why timeouts matter.</h2>
+    <p class="lead"><strong>They stop the clock and give you extra opportunities.</strong></p>
+    <p class="lead">In close games, one timeout can be the difference between losing and winning.</p>
+
+    <img src="{{ url_for('static', filename='images/trophy.png') }}" alt="Trophy" class="img-fluid mt-4" style="max-width: 150px;">
+
+    <div class="mt-5 d-flex justify-content-center gap-3">
+        <a href="/learn" class="btn btn-secondary">Go Back</a>
+        <a href="/learn/finished" class="btn btn-primary">Next</a>
+    </div>
+</div>
+{% endblock %}
