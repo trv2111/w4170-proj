@@ -108,6 +108,10 @@ body.home-page {
     width: auto;
 }
 
+.home-page .home-btn {
+    color: white;
+}
+
 .back-button {
     margin-top: 40px;
     display: inline-block;
