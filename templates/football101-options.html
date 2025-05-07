@@ -3,109 +3,97 @@
 {% block content %}
 
 <style>
-.footballmodal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
+/* ========= 4‑Down Option Cards ========================================= */
+.play-card {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  margin-top: 30px;            /* pushes cards below headline */
+
+  background: #fffffffa;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 16px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  cursor: pointer;
+}
+.play-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+/* ► once a card has been viewed, keep it light‑gray permanently */
+.play-card.visited {
+  background: #e2e2e2;          /* light gray */
+}
+.play-card.visited h3,
+.play-card.visited p {
+  color: #424141;               /* ensure text still readable */
+}
+/* card image */
+.play-card img {
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5); 
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 18px;
 }
+/* title + subtitle */
+.play-card h3 { font-family: "Bebas Neue", sans-serif; font-size: 28px; color: #424141; margin: 0 0 4px; }
+.play-card p  { font-family: "Nunito", sans-serif; font-size: 15px; color: #666; margin: 0; line-height: 1.35; }
+/* play icon overlay */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+}
+.play-card:hover .play-icon { opacity: 1; }
+/* focus ring */
+.play-card:focus-visible { outline: 4px solid #1f2c4c; outline-offset: 4px; }
 
-.modal-content {
-  background-color: #1f2c4c;
-  margin: auto;
-  padding: 20px;
-  border: 2px solid #888;
-  width: 50%;
-  border-radius: 10px;
-}
-.football101text{
-    font-size: 20px;
-    font-weight: bold;
-}
-
+/* existing modal wrapper unchanged */
+.footballmodal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; padding-top: 100px; background: rgba(0, 0, 0, 0.5); }
+.modal-content { background: #1f2c4c; margin: auto; border: 2px solid #888; border-radius: 10px; width: 50%; padding: 20px; }
 </style>
 
-<script src="static/football101-options.js"></script>
+<script src="/static/football101-options.js"></script>
+
 <br><br>
 <div class="container">
-    <div class="row middle-center-text darkGrey">
-        On 4th down, coaches must choose between three options:
-    </div>   
-    <div class="row">
-        <div class="col middle-center-text lightGrey" style="font-size: 22px;">
-          Click each option to visualize what it looks like on the field.
-        </div>
-      </div>
-      
-    <div class="row">
-        <div class="col-4">
-            <button  id="goForItBtn" class="football101buttons"><img class="img-resize" src="/static/images/go-for-it.png"></button>
-        </div>
-        <div class="col-4">
-            <button id="fieldGoalBtn" class="football101buttons"><img class="img-resize" src="/static/images/FieldGoal.png"></button>
-        </div>
-        <div class="col-4">
-            <button id="puntBtn" class="football101buttons"><img class="img-resize" src="/static/images/Football.png"></button>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-4 middle-center-text darkGrey">
-            Go For It 
-        </div>
-        <div class="col-4 middle-center-text darkGrey">
-            Kick a FG 
-        </div>
-        <div class="col-4 middle-center-text darkGrey">
-            Punt Kick 
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-4 lightGrey football101text">
-            Try to gain the yards and reset to 1st down
-        </div>
-        <div class="col-4 lightGrey football101text">
-            Take a shot at 3 points if close enough
-        </div>
-        <div class="col-4 lightGrey football101text">
-            Kick it deep to give the other team worse field position
-        </div>
-    </div>
+  <div class="row middle-center-text darkGrey">On 4th down, coaches must choose between three options:</div>
+  <div class="row"><div class="col middle-center-text lightGrey" style="font-size:22px;">Click each option to visualize what it looks like on the field.</div></div>
+
+  <!-- Option cards row -->
+  <div class="row justify-content-center gy-4">
+    <div class="col-12 col-md-4 d-flex justify-content-center">
+      <button id="goForItBtn"   class="play-card"><img src="/static/images/go-for-it.png"   alt="Go for it"><h3>Go For It</h3><p>Try to gain the yards and reset to 1st down</p><span class="play-icon">▶</span></button></div>
+    <div class="col-12 col-md-4 d-flex justify-content-center">
+      <button id="fieldGoalBtn" class="play-card"><img src="/static/images/FieldGoal.png" alt="Field goal"><h3>Kick a FG</h3><p>Take a shot at 3 points if close enough</p><span class="play-icon">▶</span></button></div>
+    <div class="col-12 col-md-4 d-flex justify-content-center">
+      <button id="puntBtn"      class="play-card"><img src="/static/images/Football.png"   alt="Punt"><h3>Punt</h3><p>Kick it deep to give the other team worse field position</p><span class="play-icon">▶</span></button></div>
+  </div>
 </div>
 
-<div class="bottom-buttons-Container">
-    <a href="/football101" class="back-button">Go Back</a>
-    <a href="/learn" class="back-button">Next</a>
-</div>
+<!-- bottom nav -->
+<div class="bottom-buttons-Container"><a href="/football101" class="back-button">Go Back</a><a href="/learn" class="back-button">Next</a></div>
 
-<!-- Modals Section -->
-<div id="goForItModal" class="footballmodal">
-    <div class="modal-content">
-      <span class="close" id="closeGoForIt"></span>
-      <img src="static/images/goforit.gif" alt="Go for it">
-    </div>
-    </div>
-    
-    <div id="fieldGoalModal" class="footballmodal">
-    <div class="modal-content">
-      <span class="close" id="closeFieldGoal"></span>
-      <img src="static/images/FieldGoal.gif" alt="Field Goal">
-    </div>
-    </div>
-    
-    <div id="puntModal" class="footballmodal">
-    <div class="modal-content">
-      <span class="close" id="closePunt"></span>
-      <img src="static/images/punt.gif" alt="Punt">
-    </div>
-</div>
-    
+<!-- Modals -->
+<div id="goForItModal"   class="footballmodal"><div class="modal-content"><span class="close" id="closeGoForIt"></span><img src="/static/images/goforit.gif"   alt="Go for it"></div></div>
+<div id="fieldGoalModal" class="footballmodal"><div class="modal-content"><span class="close" id="closeFieldGoal"></span><img src="/static/images/FieldGoal.gif" alt="Field goal"></div></div>
+<div id="puntModal"      class="footballmodal"><div class="modal-content"><span class="close" id="closePunt"></span><img src="/static/images/punt.gif"      alt="Punt"></div></div>
+
 {% endblock %}
 
+{% block scripts %}{% endblock %}

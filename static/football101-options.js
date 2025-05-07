@@ -1,40 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const goForItBtn = document.getElementById('goForItBtn');
+document.addEventListener('DOMContentLoaded', () => {
+  const goForItBtn   = document.getElementById('goForItBtn');
   const fieldGoalBtn = document.getElementById('fieldGoalBtn');
-  const puntBtn = document.getElementById('puntBtn');
+  const puntBtn      = document.getElementById('puntBtn');
 
-  const goForItModal = document.getElementById('goForItModal');
+  const goForItModal   = document.getElementById('goForItModal');
   const fieldGoalModal = document.getElementById('fieldGoalModal');
-  const puntModal = document.getElementById('puntModal');
+  const puntModal      = document.getElementById('puntModal');
 
-  const closeGoForIt = document.getElementById('closeGoForIt');
-  const closeFieldGoal = document.getElementById('closeFieldGoal');
-  const closePunt = document.getElementById('closePunt');
+  function markVisited(btn){ btn.classList.add('visited'); }
 
-  // Open modals
-  goForItBtn.addEventListener('click', () => {
-    goForItModal.style.display = "block";
-  });
+  goForItBtn .addEventListener('click', () => { markVisited(goForItBtn );   goForItModal .style.display = 'block'; });
+  fieldGoalBtn.addEventListener('click', () => { markVisited(fieldGoalBtn); fieldGoalModal.style.display = 'block'; });
+  puntBtn     .addEventListener('click', () => { markVisited(puntBtn     ); puntModal     .style.display = 'block'; });
 
-  fieldGoalBtn.addEventListener('click', () => {
-    fieldGoalModal.style.display = "block";
-  });
-
-  puntBtn.addEventListener('click', () => {
-    puntModal.style.display = "block";
-  });
-
-
-  // Clicking outside modal closes it too
-  window.addEventListener('click', function(event) {
-    if (event.target == goForItModal) {
-      goForItModal.style.display = "none";
-    }
-    if (event.target == fieldGoalModal) {
-      fieldGoalModal.style.display = "none";
-    }
-    if (event.target == puntModal) {
-      puntModal.style.display = "none";
-    }
+  window.addEventListener('click', e => {
+    if(e.target === goForItModal)   goForItModal.style.display   = 'none';
+    if(e.target === fieldGoalModal) fieldGoalModal.style.display = 'none';
+    if(e.target === puntModal)      puntModal.style.display      = 'none';
   });
 });
