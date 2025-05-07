@@ -37,7 +37,7 @@ function updateScore(id, answerid) {
 				$( ".answer-image" ).append("<img class = 'celebimage' src='" + celebration + "'>")
 			}
 			else {
-				$( ".answer-image" ).append(" X-MARK")
+				$( ".answer-image" ).append("<img class = 'missimage' src='" + failure + "'>")
 			}
 		},
 		error: function(request, status, error){

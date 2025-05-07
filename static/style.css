@@ -491,6 +491,11 @@ a:hover {
     width: 70%;
 }
 
+.missimage {
+    margin-top: 70px;
+    width: 70%;
+}
+
 .score {
     font-size: 230px;
     font-weight: bold;
