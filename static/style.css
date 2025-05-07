@@ -555,21 +555,20 @@ a:hover {
     background-color: #304c7c !important;
   }
   
-  /* 2. Bottom nav container → keeps Go Back left & Next right */
-  .bottom-buttons-Container {
-    position: absolute;
+  /* overwrite the old rule */
+.bottom-buttons-Container {
+    position: fixed;        /* <-- was absolute */
+    bottom: 30px;           /* distance from bottom edge */
     left: 0;
     right: 0;
-    bottom: 20px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    pointer-events: none;   /* keeps it out of flow until buttons inside */
-  }
-  .bottom-buttons-Container > * {
-    pointer-events: auto;   /* restore clickability for children */
-  }
-  .bottom-buttons {
+    z-index: 1000;          /* keeps it above field graphic */
+}
+
+/* the individual buttons stay the same */
+.bottom-buttons {
     background-color: #1f2c4c;
     color: #fff;
     padding: 10px 28px;
@@ -577,10 +576,11 @@ a:hover {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 22px;
     border: none;
-  }
-  .bottom-buttons:hover {
+}
+.bottom-buttons:hover {
     background-color: #304c7c;
-  }
+}
+
   
   /* Optional helper text for rewind page */
   .rewind-note {
