@@ -284,6 +284,7 @@ a:hover {
     color: white;
     padding: 5px;
     margin-top: 1em;
+    font-family: 'Nunito', sans-serif;
 }
 
 .zone-1-info {background-color: #cd5c5c; }
@@ -295,7 +296,7 @@ a:hover {
 .zone-title {
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Big Shoulders', sans-serif;
+    font-family: 'Big Shoulders', sans-serif !important;
 }
 
 .normal-button {
