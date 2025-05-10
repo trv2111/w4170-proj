@@ -133,9 +133,9 @@ def get_question():
 
     result = questions[questionid]
 
-    if id=="1":
+    if questionid=="1":
         url = url_for('static', filename='images/quiz_scoreboard_1.png')
-    elif id=="2":
+    elif questionid=="2":
         url = url_for('static', filename='images/quiz_scoreboard_2.png')
     else:
         url = url_for('static', filename='images/quiz_scoreboard_3.png')
