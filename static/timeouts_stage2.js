@@ -51,9 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   
     function goToNextSequence(calledTime) {
-      document.getElementById("headline").textContent = "They go for it, but they don’t convert.";
-      document.getElementById("scenario-text").innerHTML =
-        `You take over with ${calledTime} left and a shot to win the game.<br><br><strong>That timeout gave your team a chance.</strong>`;
+        document.getElementById("headline").textContent = "They Go for It… But Don’t Convert.";
+        document.getElementById("scenario-text").innerHTML =
+          `You take over with <strong>${calledTime}</strong> left on the clock.<br><br>` +
+          "<strong>Your timeout gave your team a chance to win.</strong>";        
   
       nextPlaceholder.innerHTML = `<a href="/learn/timeouts/final" class="bottom-buttons">Next</a>`;
     }

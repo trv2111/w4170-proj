@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (time <= 0) {
           clearInterval(intervalId);
           document.getElementById("rewind-btn").classList.remove("d-none");
-          document.getElementById("headline").textContent = "The clock hit zero.";
+          document.getElementById("headline").textContent = `You Called Timeout at ${timeText}`;
           document.getElementById("scenario-text").innerHTML =
-            "You had 1 timeout but never used it. Your team never got the ball back. Game over." +
-            '<p class="rewind-note">Click <strong>Rewind Time</strong> below to go back and try calling your timeout.</p>';
+          "That stops the clock and forces the other team to run a play.<br><br>" +
+          "If they don’t convert, your team gets one last chance.";
         }
       }, 1000);
     }

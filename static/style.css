@@ -593,4 +593,37 @@ a:hover {
     font-size: 18px;
     color: #424141;
     margin-top: 12px;
+    font-weight: normal;
   }
+
+  /* Spacing for the timeout scenario section */
+#timeout-message {
+    margin-top: 30px;
+}
+
+/* Make scenario text more readable */
+.scenario-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #1f2c4c;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Emphasize key stats */
+.scenario-text strong {
+    font-weight: 900;
+    color: #1f2c4c;
+}
+
+#headline {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: pop-in 0.6s ease-out;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

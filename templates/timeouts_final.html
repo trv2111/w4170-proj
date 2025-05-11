@@ -2,9 +2,15 @@
 
 {% block content %}
 <div class="timeouts-section text-center py-5">
-    <h2 class="mb-4">This is why timeouts matter.</h2>
-    <p class="lead"><strong>They stop the clock and give you extra opportunities.</strong></p>
-    <p class="lead">In close games, one timeout can be the difference between losing and winning.</p>
+    <h2 class="mb-4" style="font-weight: 700; font-size: 2.5rem;">Why Timeouts Matter</h2>
+
+    <p class="lead scenario-text">
+        <strong>Timeouts stop the clock and give your team another shot.</strong>
+    </p>
+    <br>
+    <p class="lead scenario-text">
+        In close games, a <strong>single timeout</strong> can be the difference between <strong>losing</strong> and <strong>winning</strong>.
+    </p>
 
     <img src="{{ url_for('static', filename='images/trophy.png') }}" alt="Trophy" class="img-fluid mt-4" style="max-width: 150px;">
 
@@ -12,6 +18,5 @@
         <a href="/learn" class="bottom-buttons">Go Back</a>
         <a href="/learn/finished" class="bottom-buttons">Next</a>
     </div>
-    
 </div>
 {% endblock %}
