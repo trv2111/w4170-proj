@@ -859,3 +859,11 @@ a:hover {
     background-color: #304c7c;
   }
   
+  .checklist-instructions {
+    font-size: 18px;
+    color: #1f2c4c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
