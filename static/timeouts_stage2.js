@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let time = 30;
     let intervalId;
+    
     let timeoutCalled = false;
   
     const nextPlaceholder = document.getElementById("next-placeholder");
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     function startCountdown() {
       updateClock();
+      document.getElementById("clock").classList.add("tickPulse");
       const timeoutBtn = document.getElementById("timeout-btn");
       timeoutBtn.classList.remove("d-none");
       timeoutBtn.disabled = false;
@@ -26,12 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("scenario-text").textContent = "You didn’t call timeout. The game ended.";
           timeoutBtn.classList.add("d-none");
         }
+        document.getElementById("clock").classList.add("tickPulse");
+
       }, 1000);
     }
   
     window.callTimeout = function () {
       timeoutCalled = true;
       clearInterval(intervalId);
+      document.getElementById("clock").classList.remove("tickPulse");
   
       const timeText = document.getElementById("clock").textContent;
       document.getElementById("timeout-btn").classList.add("d-none");

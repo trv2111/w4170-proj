@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let time = 30;
     let intervalId;
-  
+    
     function updateClock() {
       document.getElementById("clock").textContent = `0:${time < 10 ? '0' + time : time}`;
     }
@@ -11,9 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
       intervalId = setInterval(() => {
         time--;
         updateClock();
-  
+        
         if (time <= 0) {
           clearInterval(intervalId);
+          document.getElementById("clock").classList.remove("tickPulse");
           document.getElementById("rewind-btn").classList.remove("d-none");
           document.getElementById("headline").textContent = `You Called Timeout at ${timeText}`;
           document.getElementById("scenario-text").innerHTML =
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       document.getElementById("headline").textContent = "Watch What Happens When You Don’t Call Timeout";
       document.getElementById("scenario-text").textContent = "The other team can let the clock run out. Your timeout button is disabled.";
-  
+      document.getElementById("clock").classList.add("tickPulse");
       startCountdown();
     };
   
