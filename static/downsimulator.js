@@ -21,7 +21,7 @@ function nextDown() {
     // Reset everything
     currentPlay = 0;
     isResetMode = false;
-    button.innerText = "Next Play";
+    button.innerText = "Start First Down";
     document.getElementById('downDisplay').innerText = "1st Down & 10 yards to go";
     marker.style.left = '0%'; // back to start
     return;
@@ -29,6 +29,7 @@ function nextDown() {
 
   if (currentPlay < scriptedPlays.length) {
     const play = scriptedPlays[currentPlay];
+    button.innerText = "Next Play";
 
     if (play.down === "Touchdown") {
       document.getElementById('downDisplay').innerText = "First Down Achieved!";
