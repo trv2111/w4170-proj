@@ -644,3 +644,218 @@ a:hover {
     100% { transform: scale(1);    opacity: 1; }
   }
   
+  .scoreboard {
+    background-color: #1f2c4c;
+    color: white;
+    border-radius: 16px;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 500px;   /* was 420px */
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    font-family: 'Bebas Neue', sans-serif;
+    height: 400px;
+  }  
+  
+  .score-row {
+    display: flex;
+    justify-content: space-evenly;  /* more space between labels/scores */
+    align-items: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;  /* better on small screens */
+    gap: 8px;
+  }
+
+  #clock {
+    margin-bottom: 10px;
+  }
+  
+  #timeouts-left {
+    margin-bottom: 16px;
+  }  
+  
+  .team-label {
+    background-color: #304c7c;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  .team-score {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .vs-label {
+    font-size: 20px;
+    color: #ffce00;
+  }
+  
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    background-color: #304c7c;
+    padding: 14px 16px;  /* was 10px 14px */
+    border-radius: 10px;
+    flex: 1;
+    min-width: 100px;   /* wider minimum to avoid squeezing */
+  }
+  
+  
+  .stat-box span {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .stat-box strong {
+    font-size: 22px;
+    display: block;
+    color: #fff;
+  }
+  .broadcast-tag {
+    background: #ffce00;
+    color: #1f2c4c;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  .timeouts-visual {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 16px;
+  }
+  
+  .timeout-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #555;      /* inactive */
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  }
+  
+  .timeout-dot.active {
+    background-color: #ffce00;   /* gold for active */
+  }
+  
+  .timeout-dot:hover::after {
+    content: "Timeout";
+    position: absolute;
+    background: white;
+    color: #1f2c4c;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-top: 24px;
+  }
+  .timeouts-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    text-align: center; /* this will cascade to children */
+  }
+  
+  .timeout-content {
+    max-width: 600px;
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .scoreboard-container {
+    flex: 0 0 520px;
+  }
+  
+  .timeout-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  #timeout-message {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  #button-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Uniform Timeout Page Buttons */
+#button-group .btn {
+    min-width: 260px;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  
+  /* Match bottom nav buttons too */
+  .bottom-buttons {
+    min-width: 260px;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #timeout-message h2,
+#timeout-message p,
+#scenario-text,
+.broadcast-tag,
+#button-group,
+#next-placeholder {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.timeouts-section img,
+.mt-4 img {
+  display: block;
+  margin: 20px auto;
+}
+
+.next-button-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #1f2c4c;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1000;
+  }
+  
+  .next-button-fixed:hover {
+    background-color: #304c7c;
+  }
+  

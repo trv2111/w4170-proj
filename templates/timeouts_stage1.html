@@ -4,32 +4,55 @@
 
 {% extends "layout.html" %}
 {% block content %}
-<div class="timeouts-section text-center py-4 position-relative">
-  <div class="scoreboard mx-auto mb-4">
-    <div class="score-line">HOME: 20 | VISITOR: 23</div>
-    <div id="clock" class="clock">0:30</div>
-    <div class="score-details">DOWN: 4 | TO GO: 2 | BALL ON: 33 | QTR: 4</div>
-  </div>
-
-  <div id="timeout-message" class="mb-4">
-    <h2 id="headline">It All Comes Down to This.</h2>
-    <p id="scenario-text" class="scenario-text">
-        Your team is down by <strong>3</strong>. The other team has the ball.<br><br>
-        It’s <strong>4th down</strong> with only <strong>30 seconds</strong> left.<br><br>
-        They don’t <em>need</em> to run a play – they can just let the clock run out.<br><br>
-        You have <strong>1 timeout</strong>. Can you use it wisely?
-      </p>
-  </div>
-
-  <div id="button-group">
-    <!-- Dark-blue primary buttons via global css override -->
-    <button id="start-btn" class="btn btn-primary" onclick="startNoTimeoutScenario()">
-      Watch What Happens When You Don’t Call a Timeout
-    </button>
-    <button id="timeout-btn" class="btn btn-primary d-none" disabled>Call Timeout</button>
-    <button id="rewind-btn" class="btn btn-primary d-none" onclick="window.location.href='/learn/timeouts/try-again'">Rewind Time</button>
-    <button id="skip-btn" class="btn btn-outline-secondary d-none" onclick="skipToEnd()">Skip to End</button>
-  </div>
+<div class="broadcast-tag">4TH DOWN GO-FOR-IT LIVE SIMULATION</div>
+<div class="timeouts-layout">
+    <!-- Left: Scoreboard -->
+    <div class="scoreboard-container">
+      <div class="scoreboard">
+        <div class="score-row">
+          <div class="team-label">HOME</div>
+          <div class="team-score">20</div>
+          <div class="vs-label">VS</div>
+          <div class="team-label">VISITOR</div>
+          <div class="team-score">23</div>
+        </div>
+        <div id="clock" class="clock">0:30</div>
+        <div class="timeouts-visual">
+          <span class="timeout-dot active"></span>
+          <span class="timeout-dot"></span>
+          <span class="timeout-dot"></span>
+        </div>
+        <div class="stat-row">
+          <div class="stat-box"><span>DOWN</span><strong>4</strong></div>
+          <div class="stat-box"><span>TO GO</span><strong>2</strong></div>
+          <div class="stat-box"><span>BALL ON</span><strong>33</strong></div>
+          <div class="stat-box"><span>QTR</span><strong>4</strong></div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right: Content -->
+    <div class="timeout-content">
+      <div id="timeout-message" class="mb-4">
+        <h2 id="headline">It All Comes Down to This.</h2>
+        <p id="scenario-text" class="scenario-text">
+          Your team is down by <strong>3</strong>. The other team has the ball.<br><br>
+          It’s <strong>4th down</strong> with only <strong>30 seconds</strong> left.<br><br>
+          They don’t <em>need</em> to run a play – they can just let the clock run out.<br><br>
+          You have <strong>1 timeout</strong>. Can you use it wisely?
+        </p>
+      </div>
+  
+      <div id="button-group">
+        <button id="start-btn" class="btn btn-primary" onclick="startNoTimeoutScenario()">
+          Watch What Happens When You Don’t Call a Timeout
+        </button>
+        <button id="timeout-btn" class="btn btn-primary d-none" disabled>Call Timeout</button>
+        <button id="rewind-btn" class="btn btn-primary d-none" onclick="window.location.href='/learn/timeouts/try-again'">Rewind Time</button>
+        <button id="skip-btn" class="btn btn-outline-secondary d-none" onclick="skipToEnd()">Skip to End</button>
+      </div>
+    </div>
+  </div>  
 
   <!-- ★ Bottom navigation → Go Back bottom-left */ -->
   <div class="bottom-buttons-Container">
