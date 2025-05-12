@@ -1,4 +1,6 @@
-{% extends "layout.html" %}
+\{% extends "layout.html" %}
+{% block body_class %}time-score-page{% endblock %}
+
 {% block content %}
 <div class="middle-container">
   <div>
@@ -22,6 +24,29 @@
     </div>
   </div>
 </div>
+
+<!-- Scoped fix: only applies to this page -->
+<style>
+body.time-score-page .middle-container {
+  margin-top: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+body.time-score-page .scoreboard-row,
+body.time-score-page .scoreboard,
+body.time-score-page .scenario-box {
+  position: relative;
+  z-index: 1;
+}
+
+body.time-score-page .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+</style>
 
 <script src="{{ url_for('static', filename='scoreboards.js') }}"></script>
 {% endblock %}

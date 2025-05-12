@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
 
     {% include 'navbar.html' %}
 
@@ -32,5 +32,5 @@
     </div>
 
     {% block scripts %}{% endblock %}
-  </body>
+</body>
 </html>
