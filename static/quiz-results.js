@@ -19,7 +19,7 @@ function getScore() {
 				$( ".results-btn-container" ).append("<a href='/learn' class='default-button'>Review</a>")
 			} else {
 				$( ".results-text" ).append(`<b>Not quite there yet.</b><br><br>
-					You scored 0/3 on this quiz, but don't worry!<br>
+					You scored ${result["score"]}/${result["total"]} on this quiz, but don't worry!<br>
 					Learning to think like a coach takes practice. Let's revisit the lesson and sharpen your game-time decisions.`)
 				$( ".results-btn-container" ).append("<a href='/learn' class='default-button'>Review</a>")
 			}
