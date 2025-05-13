@@ -369,8 +369,6 @@ a:hover {
   }
   
   .scoreboard {
-    width: 200px;
-    height: auto;
     cursor: pointer;
     transition: transform 0.2s;
   }
@@ -649,13 +647,13 @@ a:hover {
     background-color: #1f2c4c;
     color: white;
     border-radius: 16px;
-    padding: 20px 40px;
-    width: 100%;
-    max-width: 500px;   /* was 420px */
+    padding: 10px 30px;
+    width: 80%;
+    max-width: 420px;   /* was 420px */
     margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     font-family: 'Bebas Neue', sans-serif;
-    height: 400px;
+    height: auto;
   }  
   
   .score-row {
