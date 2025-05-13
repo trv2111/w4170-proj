@@ -1,6 +1,6 @@
 /*Colors*/
 .baseColor{
-    color: #b6d6c7
+    color: #b6d6c7;
 }
 
 .accentColor{
@@ -287,6 +287,7 @@ a:hover {
     font-family: 'Nunito', sans-serif;
 }
 
+.hover-info {background-color: #1f2c4c}
 .zone-1-info {background-color: #cd5c5c; }
 .zone-2-info {background-color: #d2691e; }
 .zone-3-info {background-color: #6b8e23; }

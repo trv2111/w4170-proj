@@ -1,4 +1,9 @@
 $( function() {
+	$(".field-info").append("<div class='hover-info zone-info'>"
+								+ "<div class='zone-title'>Hover Over The Field</div>"
+								+ "Take a look at the different zones!"
+								+ "</div>")
+
 	$( ".zone-1" ).hover(function() {
 		$(".field-info").empty()
 		$(".field-info").append("<div class='zone-1-info zone-info'>"
