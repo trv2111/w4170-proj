@@ -1,6 +1,6 @@
 # 4th Down: Go-For-It Or Not?
-## UI Design Final Project - Spring 2025
-## By: Terrelyn Virzi, Katharine Vari, Dany Rosete, Connor Wikholm
+UI Design Final Project - Spring 2025
+By: Terrelyn Virzi, Katharine Vari, Dany Rosete, Connor Wikholm
 
 ## Project Overview: 
 This interactive website teaches football fans how to make smarter 4th down decisions using data-driven strategies and visuals. Through simulations, scenarios, and quizzes, users learn how to think like a coach.
